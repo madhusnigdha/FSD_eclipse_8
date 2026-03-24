@@ -25,4 +25,7 @@ public class StudentService {
     public Student getStudentById(int id) {
         return repository.findById(id).orElse(null);
     }
+    public void deleteStudent(int id) {   // ✅ ADD THIS
+        repository.deleteById(id);
+    }
 }

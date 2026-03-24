@@ -39,6 +39,11 @@ public class StudentController {
         student.setId(id);
         return service.saveStudent(student);
     }
-}
 
- 
+
+@DeleteMapping("/{id}")
+public String deleteStudent(@PathVariable int id) {
+    service.deleteStudent(id);
+    return "Student deleted successfully";
+}
+}
